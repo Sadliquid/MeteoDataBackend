@@ -3,7 +3,6 @@ from flask_cors import CORS
 from pymongo import MongoClient
 import datetime
 import os
-import serverless_wsgi
 
 # Import station_list from config.py
 from config import station_list
@@ -17,9 +16,6 @@ client = MongoClient(MONGO_CONNECTION_STRING)
 db = client["meteo"]
 test_collection = db["test"]
 temperature_collection = db["temp"]
-
-def handler(event, context):
-    return serverless_wsgi.handle_request(app, event, context, binary_support=True)
 
 def handle_api_error(e, message="Internal server error"):
     app.logger.error(f"Error: {str(e)}")
