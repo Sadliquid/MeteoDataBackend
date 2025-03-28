@@ -8,7 +8,7 @@ import os
 from config import station_list
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "meteodata.netlify.app"} })
+CORS(app, resources={r"/*": {"origins": "https://meteodata.netlify.app"} })
 
 # MongoDB connection string – replace the password/credentials as needed
 MONGO_CONNECTION_STRING = "mongodb+srv://readonly_user:lucky0218@cluster0.lqm6b.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
