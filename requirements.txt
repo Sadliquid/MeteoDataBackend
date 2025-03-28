@@ -1,2 +1,5 @@
 Flask==3.0.2
+Flask-Cors==4.0.1
+pymongo==4.6.2
+python-dotenv==1.0.1
 serverless-wsgi==3.0.2
