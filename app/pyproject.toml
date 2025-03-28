@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "meteo"  # Replace with your actual project name
+version = "0.1.0"   # Replace with your desired version
+dependencies = [
+    "flask",
+    "pymongo",
+    "python-dotenv",
+    "requests",
+    "flask_cors"
+]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+packages = { find = { where = ["src"] } }
+
+[project.scripts]
+server = "show.app:main"
+test = "testmongo:main"
